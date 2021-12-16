@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2201810110123.Inicio"
+    >
+    <ScrollView>
+        <StackLayout BackgroundColor="#e6e6e6">
+            <Grid>
+                <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                    <Frame HeightRequest="200" BackgroundColor="AntiqueWhite" Padding="0" Margin="0">
+                        <Image Source="https://www.mercadotecniatotal.com/wp-content/uploads/2019/04/plan-estrategico-para-ecommerce.jpg" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
+                    <Frame  BackgroundColor="White" HeightRequest="1000" HasShadow="True" Padding="0" Margin="0">
+
+                    <StackLayout>
+                        <StackLayout Margin="10">
+                            <Label Text="INICIO DE PAGOS" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+                            <Label Text="BIENVENIDO AL EXAMEN FINAL DE MISAEL ORDONEZ N-CUENTA 201810110123" TextColor="Black" FontAttributes="Italic"></Label>
+                            <StackLayout Margin="-20,10,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Button x:Name="Btninicio" Text="Iniciar " Clicked="Btninicio_Clicked"  HeightRequest="50"
+                                    CornerRadius="30"
+                                    BackgroundColor="DeepSkyBlue" TextColor="White"  />
+                        </StackLayout>
+                    </StackLayout>
+
+                </Frame>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

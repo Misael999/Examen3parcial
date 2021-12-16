@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2201810110123.MainPage">
+
+    <ContentPage.ToolbarItems >
+        <!-- Boton de regresar -->
+        <!--Boton Salvar/Guaradar-->
+        <ToolbarItem
+                Priority="1"
+                Order="Primary"
+                x:Name="BtnLista"
+                Text="Ver lista"
+                Clicked="BtnLista_Clicked"
+                
+            />
+
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout BackgroundColor="#e6e6e6">
+            <Grid>
+                <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                    <Frame HeightRequest="200" BackgroundColor="AntiqueWhite" Padding="0" Margin="0">
+                        <Image Source="https://www.mercadotecniatotal.com/wp-content/uploads/2019/04/plan-estrategico-para-ecommerce.jpg" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
+                    <Frame  BackgroundColor="White" HeightRequest="1000" HasShadow="True" Padding="0" Margin="0">
+
+                        <StackLayout>
+
+
+                            <StackLayout Margin="10">
+                                <Label Text="EXAMEN PAGOS" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Padding="0" Margin="20,0">
+
+                                <Entry x:Name="idSitio" Text="" IsVisible="false"></Entry>
+
+                                <StackLayout  Margin="50,0,50,0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source="" x:Name="fotografia" BackgroundColor="LightSlateGray"  Aspect="AspectFill" Margin="0"  />
+                                    </Grid>
+                                </StackLayout>
+
+
+                                <StackLayout Margin="30,10,20,10"
+                                     Orientation="Horizontal">
+                                    <Button x:Name="btnTomarFoto"
+                                        HeightRequest="50"
+                                        CornerRadius="30"
+                                        BackgroundColor="DeepSkyBlue" TextColor="White"
+                                        Text="Tomar Foto"
+                                        FontSize="15"
+                                        Clicked="btnTomarFoto_Clicked"
+                    
+                                    />
+
+                                    <Button  x:Name="btnBuscarFoto"
+                                        HeightRequest="50"
+                                        BackgroundColor="DeepSkyBlue" TextColor="White" CornerRadius="30"
+                                        Text="Buscar Foto"
+                                        Clicked="btnBuscarFoto_Clicked"
+                                    />
+
+                                    <Label x:Name="pathFoto" FontSize="1"/>
+                                </StackLayout>
+
+                                <Label Text="Descripcion" TextColor="Black" FontAttributes="Italic"></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,-5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Entry x:Name="txtdescrip" Text="" Placeholder="Ingrese la decripcion de pago" TextColor="DeepSkyBlue" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Label Text="Monto" TextColor="Black" FontAttributes="Italic"></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,-5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Entry x:Name="txtmonto" Text="" Placeholder="L." Keyboard="Numeric" TextColor="DeepSkyBlue" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Label Text="Fecha" TextColor="Black" FontAttributes="Italic" ></Label>
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,-5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <DatePicker MinimumDate="01/01/1980" DateSelected="DatePicker_DateSelected" x:Name="fecha"  />    
+                                </Frame>
+
+                                
+
+                                <StackLayout Margin="-20,10,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <Button x:Name="Btnguardar" Text="guardar " Clicked="Btnguardar_Clicked"  HeightRequest="50"
+                                    CornerRadius="30"
+                                    BackgroundColor="DeepSkyBlue" TextColor="White"  />
+                                </StackLayout>
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

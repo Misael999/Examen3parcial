@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2201810110123.ListaDePagos">
+    
+    <ScrollView>
+        <StackLayout BackgroundColor="#e6e6e6">
+            <Grid>
+                <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                    <Frame HeightRequest="200" BackgroundColor="AntiqueWhite" Padding="0" Margin="0">
+                        <Image Source="https://www.mercadotecniatotal.com/wp-content/uploads/2019/04/plan-estrategico-para-ecommerce.jpg" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                </StackLayout>
+                
+                <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
+                    <Frame  BackgroundColor="White" HeightRequest="1000" HasShadow="True" Padding="0" Margin="0">
+
+                        <StackLayout>
+                            <Frame HeightRequest="60" Margin="4" CornerRadius="10" IsClippedToBounds="False" BackgroundColor="#DAECF9" HasShadow="True">
+                                <ListView x:Name="lstdatos" ItemTapped="lstdatos_ItemTapped">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10"></ColumnDefinition>
+                                        <ColumnDefinition Width="160"></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding descripcion}" Grid.Column="1" TextColor="#0D3CB8" FontAttributes="Bold"/>
+                                    <Label Text="{Binding monto, StringFormat='Monto: {0}'}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"/>
+                                </Grid>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Frame>
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
